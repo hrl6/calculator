@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    background-color: rgb(124, 124, 124);
+    max-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, auto);
+    align-items: center;
+    padding: 20px 10px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+}
+
+input {
+    font-family: monospace;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    font-size: 2rem;
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    border-style: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px;
+    margin-bottom: 10px;
+    overflow: auto;
+}
+
+button {
+    font-family: monospace;
+    font-size: 1.3rem;
+    align-items: center;
+    border-style: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+}
+
+#zero-button {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.clear-button {
+    background-color: #ff932e;
+}
+
+.operator-button {
+    background-color: #89e7ff;
+}
+
+.equal-button {
+    background-color: #6395ff;
+}
+
+.number-clicked {
+    background-color: rgb(190, 190, 190);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.clear-clicked {
+    background-color: #da7d27;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.operator-clicked {
+    background-color: #69b4c7;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.equal-clicked {
+    background-color: #496fc0;
+    transition: background-color 0.2s ease-in-out;
+}

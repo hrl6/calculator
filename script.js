@@ -1,4 +1,31 @@
 const display = document.getElementById(`display`);
+const numberButtons = document.querySelectorAll(`.number-button`);
+const clearButtons = document.querySelectorAll(`.clear-button`);
+const operatorButtons = document.querySelectorAll(`.operator-button`);
+const equalButton = document.querySelectorAll(`.equal-button`);
+
+
+function click(buttons, clicked){
+    buttons.forEach(button => {
+        button.addEventListener(`click`, () => {
+            button.classList.add(clicked);
+            setTimeout(() => {
+                button.classList.remove(clicked);
+            }, 100);
+        });
+        button.addEventListener(`mousedown`, () => {
+            button.classList.add(clicked);
+        });
+        button.addEventListener(`mouseup`, () => {
+            button.classList.remove(clicked);
+        });
+    });
+}
+
+click(numberButtons, `number-clicked`);
+click(clearButtons, `clear-clicked`);
+click(operatorButtons, `operator-clicked`);
+click(equalButton, `equal-clicked`);
 
 function displayValue(value){
     const lastChar = display.value.slice(-1);
@@ -6,7 +33,7 @@ function displayValue(value){
     if(
     ([`+`,`-`,`×`,`÷`].includes(lastChar) && [`+`,`-`,`×`,`÷`].includes(value)) ||
     (lastChar === `%` && value === `%`) ||
-    (display.value === `` && [`+`,`-`,`×`,`÷`,`%`].includes(value)) ||
+    (display.value === `` && [`+`,`×`,`÷`,`%`].includes(value)) ||
     (display.value.includes(`.`) && value === `.`) ||
     (errorValue.includes(display.value))
     ){

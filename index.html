@@ -7,31 +7,35 @@
     <title>Calculator</title>
 </head>
 <body>
-    <input type="text" id="display" readonly>
+    <div id="container">
+        <input type="text" id="display" readonly>
 
-    <button onclick="clearEmpty()">CE</button>
-    <button onclick="clearBackspace()">C</button>
-    <button onclick="displayValue(`%`)">%</button>
-    <button onclick="displayValue(`÷`)">÷</button>
-
-    <button onclick="displayValue(`7`)">7</button>
-    <button onclick="displayValue(`8`)">8</button>
-    <button onclick="displayValue(`9`)">9</button>
-    <button onclick="displayValue(`×`)">×</button>
-
-    <button onclick="displayValue(`4`)">4</button>
-    <button onclick="displayValue(`5`)">5</button>
-    <button onclick="displayValue(`6`)">6</button>
-    <button onclick="displayValue(`-`)">-</button>
-
-    <button onclick="displayValue(`1`)">1</button>
-    <button onclick="displayValue(`2`)">2</button>
-    <button onclick="displayValue(`3`)">3</button>
-    <button onclick="displayValue(`+`)">+</button>
-
-    <button onclick="displayValue(`0`)">0</button>
-    <button onclick="displayValue(`.`)">.</button>
-    <button onclick="operate()">=</button>
+        <button class="clear-button" onclick="clearEmpty()">CE</button>
+        <button class="clear-button" onclick="clearBackspace()">C</button>
+        <button class="operator-button" onclick="displayValue(`%`)">%</button>
+        <button class="operator-button" onclick="displayValue(`÷`)">÷</button>
+    
+        <button class="number-button" onclick="displayValue(`7`)">7</button>
+        <button class="number-button" onclick="displayValue(`8`)">8</button>
+        <button class="number-button" onclick="displayValue(`9`)">9</button>
+        <button class="operator-button" onclick="displayValue(`×`)">×</button>
+    
+        <button class="number-button" onclick="displayValue(`4`)">4</button>
+        <button class="number-button" onclick="displayValue(`5`)">5</button>
+        <button class="number-button" onclick="displayValue(`6`)">6</button>
+        <button class="operator-button" onclick="displayValue(`-`)">-</button>
+    
+        <button class="number-button" onclick="displayValue(`1`)">1</button>
+        <button class="number-button" onclick="displayValue(`2`)">2</button>
+        <button class="number-button" onclick="displayValue(`3`)">3</button>
+        <button class="operator-button" onclick="displayValue(`+`)">+</button>
+    
+        <button id="zero-button" class="number-button" onclick="displayValue(`0`)">0</button>
+        <button class="number-button" onclick="displayValue(`.`)">.</button>
+        <button class="equal-button" onclick="operate()">=</button>
+    </div>
+    <footer>Copyright &copy owo-del</footer>
 </body>
+
 <script src="script.js"></script>
 </html>
